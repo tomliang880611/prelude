@@ -7,4 +7,5 @@
 
 ;;; set defualt tmp folder
       (setenv "TMP" "C:/Users/43999174/Local/Temp")
+      (setq tramp-default-method "plink")
 ))
