@@ -12,7 +12,7 @@
 
 ;; avy char jump
 (prelude-require-package 'avy)
-(global-set-key (kbd "C-:") 'avy-goto-char)
+(global-set-key (kbd "C-;") 'avy-goto-char)
 
 ;; sqlplus
 (prelude-require-package 'sqlplus)
