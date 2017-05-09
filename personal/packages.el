@@ -14,7 +14,15 @@
 (prelude-require-package 'avy)
 (global-set-key (kbd "C-:") 'avy-goto-char)
 
+;; sqlplus
 (prelude-require-package 'sqlplus)
+
+;; multiple cursor
+(prelude-require-package 'multiple-cursors)
+(global-set-key (kbd "C-S-c C-S-c") 'mc/edit-lines)
+(global-set-key (kbd "C->") 'mc/mark-next-like-this)
+(global-set-key (kbd "C-<") 'mc/mark-previous-like-this)
+(global-set-key (kbd "C-c C-<") 'mc/mark-all-like-this)
 
 ;;; set default shell to powershell
 (setq explicit-shell-file-name "powershell"
