@@ -24,10 +24,11 @@
 (global-set-key (kbd "C-<") 'mc/mark-previous-like-this)
 (global-set-key (kbd "C-c C-<") 'mc/mark-all-like-this)
 
-;;; set default shell to powershell
-(setq explicit-shell-file-name "powershell"
-      explicit-powershell-args '("-file" "-"))
-(setq tramp-smb-winexe-program "powershell.exe")
+;; javascript auto completion
+(prelude-require-package 'company-tern)
 
-;;; set defualt tmp folder
-(setenv "TMP" "C:/Users/43999174/Local/Temp")
+;; skewer mode for live js editing
+(prelude-require-package 'skewer-mode)
+(add-hook 'js2-mode-hook 'skewer-mode)
+(add-hook 'css-mode-hook 'skewer-css-mode)
+(add-hook 'html-mode-hook 'skewer-html-mode)
