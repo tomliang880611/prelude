@@ -3,12 +3,9 @@
 (add-hook 'clojure-mode-hook (lambda () (enable-paredit-mode)))
 (add-hook 'emacs-lisp-mode-hook (lambda () (enable-paredit-mode)))
 
-;; swiper setting
-(prelude-require-package 'swiper)
-(global-set-key "\C-s" 'swiper)
-
 ;; helm swoop
 (prelude-require-package 'helm-swoop)
+(global-set-key (kbd "C-c C-s") 'helm-swoop)
 
 ;; avy char jump
 (prelude-require-package 'avy)
@@ -23,6 +20,7 @@
 (global-set-key (kbd "C->") 'mc/mark-next-like-this)
 (global-set-key (kbd "C-<") 'mc/mark-previous-like-this)
 (global-set-key (kbd "C-c C-<") 'mc/mark-all-like-this)
+(global-set-key (kbd "C-c m m") 'mc/mark-all-in-region-regexp)
 
 ;; javascript auto completion
 (prelude-require-package 'company-tern)
@@ -32,3 +30,6 @@
 (add-hook 'js2-mode-hook 'skewer-mode)
 (add-hook 'css-mode-hook 'skewer-css-mode)
 (add-hook 'html-mode-hook 'skewer-html-mode)
+
+;; enable global linum mode
+(global-linum-mode t)
